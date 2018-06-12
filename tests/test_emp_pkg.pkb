@@ -13,7 +13,7 @@ is
       from emp 
      where empno = l_empno;
 
-    l_sal_expected := round((l_sal_orig * (l_pct_raise/100) ) + l_sal_orig,2);
+    l_sal_expected := round((l_sal_orig * (l_pct_raise/100) ) + l_sal_orig + 1,2);
 
     emp_pkg.give_raise(l_empno,l_pct_raise);
 
