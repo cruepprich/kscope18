@@ -6,7 +6,7 @@ is
   begin
     -- Raise salary for empno by given percentage
     update emp
-       set sal = 1 --round((sal * (p_pct/100) ) + sal,2)
+       set sal = round((sal * (p_pct/100) ) + sal,2)
      where empno = p_empno;
      
   end give_raise;
